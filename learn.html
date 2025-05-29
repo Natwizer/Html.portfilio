@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+</head>
+<body>
+   <h1>welcome to the learning coding environment</h1><script>
+   window.onload = function() {
+  const score = localStorage.getItem('score');
+  if (score) {
+    document.body.innerHTML += `<p>You scored ${score} out of 10. Congratulations, you can proceed!</p>`;
+    localStorage.removeItem('score');
+  } else {
+    document.body.innerHTML += '<p>No score found.</p>';
+  }
+};
+ </script>
+</body>
+</html>

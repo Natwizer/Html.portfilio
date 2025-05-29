@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    <link rel="stylesheet" href="pc.css">
+</head>
+<body>
+    <div class="logout">
+      <a href="logout.html" id="logout"></a>
+     </div>
+    <script>
+    const logoutLink = document.getElementById('logout');
+
+    logoutLink.addEventListener('click', () => {
+      localStorage.removeItem('loggedIn');
+      window.location.href = 'log.html';
+    });
+
+    // Check if user is logged in
+    if (!localStorage.getItem('loggedIn')) {
+      window.location.href = 'log.html';
+    }
+  </script>
+</body>
+</html>
+
+</body>
+</html>
